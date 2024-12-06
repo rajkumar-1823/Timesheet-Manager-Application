@@ -102,7 +102,7 @@ const verifyToken = (roles) => (req, res, next) => {
 
   const token = authHeader.split(' ')[1];
   try {
-    const decoded = jwt.verify(token, 'yourSecretKey'); // Use the same secret key
+    const decoded = jwt.verify(token, 'G9iwh*3hd!!a9$X12k38QwnfJsd@9hkX'); // Use the same secret key
 
     if (!roles.includes(decoded.role)) {
       return res.status(403).json({ message: 'Access denied.' });
